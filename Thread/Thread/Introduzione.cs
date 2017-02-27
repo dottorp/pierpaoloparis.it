@@ -3,9 +3,9 @@ using System.Threading;
 
 namespace EsempiThread
 {
-    public class Introduzione
+    public class Introduzione:IEsempio
     {
-        public static void Main(string[] args)
+        public void Run()
         {
             Thread t = new Thread(new ThreadStart(Worker));
             t.Start();
@@ -27,5 +27,7 @@ namespace EsempiThread
                 Thread.Sleep(0);
             }
         }
+
+      
     }
 }
