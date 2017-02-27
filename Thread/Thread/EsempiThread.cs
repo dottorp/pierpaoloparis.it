@@ -11,11 +11,10 @@ namespace EsempiThread
         public static void Main(string[] args)
         {
             IEsempio esempio;
-            Dictionary<int, Type> examples = BuildMenu();
-            StampaMenu(examples);
+            Dictionary<int, Type> esempi = BuildMenu();
             int numeroEsempio = 0;
-            do { numeroEsempio = SelezionaEsempio(); } while (numeroEsempio > examples.Keys.Count);
-            Type exType = examples[numeroEsempio];
+            do { numeroEsempio = SelezionaEsempio(esempi); } while (numeroEsempio > esempi.Keys.Count);
+            Type exType = esempi[numeroEsempio];
             ConstructorInfo ctor = exType.GetConstructor(Type.EmptyTypes);
             esempio = (IEsempio)ctor.Invoke(null);
             esempio.Run();
@@ -23,22 +22,21 @@ namespace EsempiThread
 
 
 
-        private static int SelezionaEsempio()
+        private static int SelezionaEsempio(Dictionary<int, Type> esempi)
         {
             int numeroEsempio = 0;
-            Console.WriteLine("*********** ESEMPI ***********");
-            Console.WriteLine("Inserire il numero dell'esempio da eseguire e premere invio\n");
             do
             {
                 try
                 {
+                    StampaMenu(esempi);
                     numeroEsempio = Convert.ToInt32(Console.ReadLine());
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Inserire il numero dell'esempio da eseguire e premere invio\n");
+                    StampaMenu(esempi);
                 }
-            } while (numeroEsempio < 0);
+            } while (numeroEsempio <= 0);
             return numeroEsempio;
         }
 
@@ -54,6 +52,8 @@ namespace EsempiThread
         }
         private static void StampaMenu(Dictionary<int, Type> examples)
         {
+            Console.WriteLine("*********** ESEMPI ***********");
+            Console.WriteLine("Inserire il numero dell'esempio da eseguire e premere invio\n");
             foreach (int numeroEsempio in examples.Keys)
                 Console.WriteLine("{0} - {1}", numeroEsempio, examples[numeroEsempio].Name);
         }
