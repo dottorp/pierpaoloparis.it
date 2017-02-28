@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace EsempiThread
 {
@@ -15,6 +19,8 @@ namespace EsempiThread
             t2.Start("https://www.google.it");
             t3.Start("https://msdn.microsoft.com/it-it/library/system.threading.parameterizedthreadstart(v=vs.110).aspx");
             t3.Join();
+            Console.WriteLine("Esecuzione terminata. Premere un tasto per continuare.\n");
+            Console.ReadKey();
         }
 
         private void WebDownload(object parameter)

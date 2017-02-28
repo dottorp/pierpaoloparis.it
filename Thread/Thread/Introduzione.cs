@@ -14,7 +14,9 @@ namespace EsempiThread
                 Console.WriteLine("Thread principale. Faccio cose, vedo gente...");
                 Thread.Sleep(0);
             }
-            t.Join();           
+            t.Join();
+            Console.WriteLine("Esecuzione terminata. Premere un tasto per continuare.\n");
+            Console.ReadKey();
         }
 
         private static void Worker()

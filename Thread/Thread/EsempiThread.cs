@@ -17,9 +17,7 @@ namespace EsempiThread
             Type exType = esempi[numeroEsempio];
             ConstructorInfo ctor = exType.GetConstructor(Type.EmptyTypes);
             esempio = (IEsempio)ctor.Invoke(null);
-            esempio.Run();
-            Console.WriteLine("Esecuzione terminata. Premere un tasto per continuare.\n");
-            Console.ReadKey();
+            esempio.Run();           
         }
 
 

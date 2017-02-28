@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EsempiThread.cs" />
+    <Compile Include="ForegroundBackgroundTerminaSubito.cs" />
     <Compile Include="IEsempio.cs" />
     <Compile Include="Introduzione.cs" />
     <Compile Include="Parametri.cs" />
