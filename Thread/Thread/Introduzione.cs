@@ -14,9 +14,7 @@ namespace EsempiThread
                 Console.WriteLine("Thread principale. Faccio cose, vedo gente...");
                 Thread.Sleep(0);
             }
-            t.Join();
-            Console.WriteLine("Tutti i thread hanno finito il loro lavoro. Premere un tasto per terminare");
-            Console.ReadKey();
+            t.Join();           
         }
 
         private static void Worker()
@@ -26,8 +24,6 @@ namespace EsempiThread
                 Console.WriteLine("Thread worker numero {0}\n",i);
                 Thread.Sleep(0);
             }
-        }
-
-      
+        }      
     }
 }

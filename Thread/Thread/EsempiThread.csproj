@@ -46,6 +46,7 @@
     <Compile Include="EsempiThread.cs" />
     <Compile Include="IEsempio.cs" />
     <Compile Include="Introduzione.cs" />
+    <Compile Include="Parametri.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

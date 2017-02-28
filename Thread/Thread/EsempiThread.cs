@@ -18,6 +18,8 @@ namespace EsempiThread
             ConstructorInfo ctor = exType.GetConstructor(Type.EmptyTypes);
             esempio = (IEsempio)ctor.Invoke(null);
             esempio.Run();
+            Console.WriteLine("Esecuzione terminata. Premere un tasto per continuare.\n");
+            Console.ReadKey();
         }
 
 
@@ -46,7 +48,7 @@ namespace EsempiThread
             int key = 1;
             foreach (Type esempio in System.Reflection.Assembly.GetExecutingAssembly().GetTypes().Where(mytype => mytype.GetInterfaces().Contains(typeof(IEsempio))))
             {
-                examples.Add(key, esempio);
+                examples.Add(key++, esempio);
             }
             return examples;
         }
