@@ -27,7 +27,7 @@ namespace EsempiThread
                     Thread.Sleep(1000);
                 }
             }
-            catch(ThreadAbortException tae)
+            catch (ThreadAbortException tae)
             {
                 Console.WriteLine("Sono un thread qualunque. Qualcuno mi ha ucciso. Ciò è indisponente");
             }
