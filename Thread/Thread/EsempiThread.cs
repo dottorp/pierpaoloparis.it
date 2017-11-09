@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Chapter1
 {
-    public class EsempiThread
+    public class Chapter1
     {
         public static void Main(string[] args)
         {

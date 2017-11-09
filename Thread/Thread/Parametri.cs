@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Utilities;
 
 namespace Chapter1
 {
@@ -19,8 +20,7 @@ namespace Chapter1
             t2.Start("https://www.google.it");
             t3.Start("https://msdn.microsoft.com/it-it/library/system.threading.parameterizedthreadstart(v=vs.110).aspx");
             t3.Join();
-            Console.WriteLine("Esecuzione terminata. Premere un tasto per continuare.\n");
-            Console.ReadKey();
+            Utility.PremiUnTastoPerContnuare();
         }
 
         private void WebDownload(object parameter)

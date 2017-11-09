@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading;
+using Utilities;
+
 namespace Chapter1
 {
     public class ThreadStatic : IEsempio
@@ -23,7 +25,7 @@ namespace Chapter1
                 Console.WriteLine("Thread B: {0}", contatore);
             }
         }).Start();
-            Console.ReadKey();
+            Utility.PremiUnTastoPerContnuare();
         }
     }
 }

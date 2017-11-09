@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-
+using Utilities;
 namespace Chapter1
 {
     public class Introduzione:IEsempio
@@ -15,8 +15,7 @@ namespace Chapter1
                 Thread.Sleep(0);
             }
             t.Join();
-            Console.WriteLine("Esecuzione terminata. Premere un tasto per continuare.\n");
-            Console.ReadKey();
+            Utility.PremiUnTastoPerContnuare();
         }
 
         private static void Worker()

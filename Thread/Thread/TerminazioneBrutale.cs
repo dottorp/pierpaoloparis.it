@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Utilities;
 
 namespace Chapter1
 {
@@ -13,8 +14,7 @@ namespace Chapter1
             Thread.Sleep(5000);
             t.Abort();
             t.Join();
-            Console.WriteLine("Esecuzione terminata. Premere un tasto per continuare.");
-            Console.ReadKey();
+            Utility.PremiUnTastoPerContnuare();
         }
 
         private void Worker()

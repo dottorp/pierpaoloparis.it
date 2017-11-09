@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Utilities;
 
 namespace Chapter1
 {
@@ -30,9 +31,8 @@ namespace Chapter1
             t1.Start();
             t2.Start();
             t1.Join();
-            t2.Join();            
-            Console.WriteLine("Esecuzione terminata, premere un tasto per terminare.");
-            Console.ReadKey();
+            t2.Join();
+            Utility.PremiUnTastoPerContnuare();
         }
     }
 }

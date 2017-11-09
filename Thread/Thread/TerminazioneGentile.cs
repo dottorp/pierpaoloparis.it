@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Utilities;
 
 namespace Chapter1
 {
@@ -18,6 +19,7 @@ namespace Chapter1
             deviFermarti = true;
             Console.WriteLine(deviFermarti);
             t.Join();
+            Utility.PremiUnTastoPerContnuare();
         }
 
         private static void Worker(ref bool deviFermarti)
