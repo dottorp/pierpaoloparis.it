@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace EsempiThread
+namespace Chapter1
 {
     public class ForegroundBackgroundTerminaSubito : IEsempio
     {

@@ -1,4 +1,4 @@
-﻿namespace EsempiThread
+﻿namespace Chapter1
 {
     public interface IEsempio
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-namespace EsempiThread
+namespace Chapter1
 {
     public class ThreadStatic : IEsempio
     {

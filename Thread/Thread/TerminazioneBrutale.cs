@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace EsempiThread
+namespace Chapter1
 {
     public class TerminazioneBrutale : IEsempio
     {
@@ -29,11 +29,11 @@ namespace EsempiThread
             }
             catch (ThreadAbortException tae)
             {
-                Console.WriteLine("Sono un thread qualunque. Qualcuno mi ha ucciso. Ciò è indisponente");
+                Console.WriteLine("Sono un thread qualunque. Qualcuno mi ha ucciso ({0}). Ciò è indisponente",tae.Message);
             }
             finally
             {
-                Console.WriteLine("Sono un thread qualunque. Se avessi bisogno di fare testamento potrei farlo qui.");
+                Console.WriteLine("Sono un thread qualunque. Se avessi bisogno di fare testamento postumo potrei farlo qui.");
             }
         }
     }
